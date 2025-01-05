@@ -6,6 +6,7 @@ import { type NewTaskData } from '../task/task.model';
 @Component({
   selector: 'app-new-task',
   imports: [FormsModule],
+  standalone: true,
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.css'
 })

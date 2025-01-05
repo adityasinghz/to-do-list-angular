@@ -6,6 +6,7 @@ import { TasksService } from '../tasks.service';
 import { inject } from '@angular/core';
 @Component({
   selector: 'app-task',
+  standalone: true,
   imports: [CardComponent, DatePipe],
   templateUrl: './task.component.html',
   styleUrl: './task.component.css'

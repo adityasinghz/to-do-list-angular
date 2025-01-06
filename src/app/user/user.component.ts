@@ -1,14 +1,11 @@
 import { Component, computed, input, output } from '@angular/core';
 import { User } from './user.model';
-import { CardComponent } from '../shared/card/card.component';
-
 
 @Component({
   selector: 'app-user',
-  standalone: true,
-  imports: [CardComponent],
+  standalone: false,
   templateUrl: './user.component.html',
-  styleUrl: './user.component.css'
+  styleUrl: './user.component.css',
 })
 export class UserComponent {
   // @Input() avatar!: string;
@@ -19,7 +16,7 @@ export class UserComponent {
   imagePath = computed(() => `assets/users/${this.user().avatar}`);
   select = output<string>();
   selected = input.required<boolean>();
-  onClick(){
-      this.select.emit(this.user().id);
+  onClick() {
+    this.select.emit(this.user().id);
   }
 }
